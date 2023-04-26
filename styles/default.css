@@ -1,0 +1,81 @@
+/* =====GLOBAL===== */
+
+:root {
+	/* Variables */
+	--font: #000;
+	--bg: #FFF;
+  --top: #D91842;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--font);
+
+  transition: all 0.2s;
+}
+
+body {
+	background-color: var(--bg);
+}
+header,
+main,
+footer {
+  width: 100%;
+  padding: 0 6px;
+}
+
+
+/* =====HEADER===== */
+header {
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+	text-decoration: none;
+}
+
+.head-logo {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.head-logo-icon {
+  height: 100%;
+}
+
+.head-logo-img {
+  height: 50px;
+}
+
+.head-logo-group {
+  margin: 0 14px;
+
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.toogle-theme {
+  width: 24px;
+  height: 24px;
+
+  border: 3px solid var(--font);
+  border-radius: 5px;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.toogle-theme:hover {
+  box-shadow: 0 0 6px var(--font);
+}
