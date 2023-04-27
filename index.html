@@ -6,8 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Гостевой портал БВ321</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
 
 	<!-- =====STYLES===== -->
+	<link rel="preload" as="style" href="styles/loader.css" onload="this.rel='stylesheet'">
 	<link rel="stylesheet" href="styles/default.css">
 	<link rel="stylesheet" href="styles/index.css">
 
@@ -16,13 +19,21 @@
 </head>
 
 <body>
+
+	<!-- =====LOADING SCREEN===== -->
+	<div id="loading">
+		<div class="load-ring"></div>
+		<span class="load-text">Загрузка...</span>
+	</div>
+
+
 	<!-- =====HEADER===== -->
 	<header>
 
 		<div class="head-col-left">
 			<div class="head-logo">
 				<a class="head-logo-icon" href="https://journal.top-academy.ru/ru" target="_blank">
-					<img class="head-logo-img" src="images/top_logo_black.png" alt="Top Academy">
+					<img id="head-logo-img" src="images/top_logo_black.png" alt="Top Academy">
 				</a>
 				<a class="head-logo-group" href="index.html">
 					БВ321
@@ -38,12 +49,14 @@
 				<a class="head-nav-item" href="#"><div class="nav-item-block">Презентации</div></a>
 				<a class="head-nav-item" href="#"><div class="nav-item-block">Видеозаписи</div></a>
 				<a class="head-nav-item" href="#"><div class="nav-item-block">Таблицы</div></a>
-				<a class="head-nav-item" href="#"><div class="nav-item-block">Статьи</div></a>
+				<a class="head-nav-item" href="articles.html"><div class="nav-item-block">Статьи</div></a>
 				<a class="contacts" href="#footer">Контакты</a>
 			</nav>
 
 			<div class="burger-nav">
-				<svg id="burger-logo" stroke-width="3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000"><path d="M3 5h18M3 12h18M3 19h18" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+				<svg id="burger-logo" stroke-width="3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000">
+					<path d="M3 5h18M3 12h18M3 19h18" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
 			</div>
 
 		</div>
@@ -61,7 +74,7 @@
 		<a class="side-item" href="#"><div class="side-item-block">Презентации</div></a>
 		<a class="side-item" href="#"><div class="side-item-block">Видеозаписи</div></a>
 		<a class="side-item" href="#"><div class="side-item-block">Таблицы</div></a>
-		<a class="side-item" href="#"><div class="side-item-block">Статьи</div></a>
+		<a class="side-item" href="articles.html"><div class="side-item-block">Статьи</div></a>
 	</div>
 
 
@@ -121,21 +134,33 @@
 			
 			<div class="foot-right">
 				<h4 class="foot-title">Контакты преподавателя</h4>
+
+				<h5 class="foot-title-mini uniq-ftm">Предпочтительный способ связи</h5>
+				<div class="foot-contact">
+					<p class="contact-info"><a href="https://api.whatsapp.com/send?phone=79995663701" target="_blank">api.whatsapp.com/<wbr>send?phone=<wbr>79995663701</a></p>
+					<img class="contact-icon" src="images/contacts/whatsapp.png" alt="loc">
+				</div>
+
+				<h5 class="foot-title-mini">Остальные данные</h5>
+				<div class="foot-contact">
+					<p class="contact-info"><a href="tel:+7(999)566-37-01" target="_blank">+7(999)566-37-01</a></p>
+					<img class="contact-icon" src="images/contacts/phone.png" alt="loc">
+				</div>
 				<div class="foot-contact">
 					<p class="contact-info"><a href="mailto:i.o.storozhev990@gmail.com" target="_blank">i.o.storozhev<wbr>@gmail.com</a></p>
 					<img class="contact-icon" src="images/contacts/email.png" alt="loc">
 				</div>
 				<div class="foot-contact">
-					<p class="contact-info"><a href="tel:+7(999)566-37-01" target="_blank">+7(999)566-37-01</a></p>
-					<img class="contact-icon" src="images/contacts/whatsapp.png" alt="loc">
+					<p class="contact-info"><a href="https://t.me/iostprog" target="_blank">t.me/IOSTprog</a></p>
+					<img class="contact-icon" src="images/contacts/telegram.png" alt="loc">
 				</div>
 				<div class="foot-contact">
 					<p class="contact-info"><a href="https://github.com/IOPjolnir" target="_blank">github.com/<wbr>IOPjolnir</a></p>
 					<img class="contact-icon" src="images/contacts/github.png" alt="loc">
 				</div>
 				<div class="foot-contact">
-					<p class="contact-info"><a href="https://www.youtube.com/channel/UCqd89DCDMK0SiN51lDszjLg" target="_blank">
-						youtube.com/<wbr>channel/<wbr>UCqd89DCDMK<wbr>0SiN51lDszjLg
+					<p class="contact-info"><a href="https://www.youtube.com/@iostprograming8097" target="_blank">
+						youtube.com/<wbr>@iostprograming8097
 					</a></p>
 					<img class="contact-icon" src="images/contacts/youtube.png" alt="loc">
 				</div>
@@ -146,8 +171,13 @@
 
 
 
+	<!-- =====SCROLLBACK BUTTON===== -->
 	<a id="back-btn" href="#main"></a>
 
+
+	
+	<script>
+	</script>
 </body>
 
 </html>
