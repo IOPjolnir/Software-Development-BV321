@@ -71,7 +71,7 @@ header a {
 	font-weight: bold;
 }
 
-.toogle-theme {
+#toogle-theme {
 	width: 24px;
 	height: 24px;
 	margin-right: 16px;
@@ -83,7 +83,7 @@ header a {
 	cursor: pointer;
 }
 
-.toogle-theme:hover {
+#toogle-theme:hover {
 	box-shadow: 0 0 6px var(--font);
 }
 
@@ -129,6 +129,69 @@ nav {
 .contacts:hover {
 	background-color: var(--top);
 	color: #FFF
+}
+
+/* BURGER MENU */
+.burger-nav {
+	height: 100%;
+
+	display: none;
+	align-items: center;
+}
+
+#burger-logo {
+	height: 40px;
+}
+
+#side-nav {
+	padding: 6px 16px 6px 50px;
+	height: 100%;
+
+	border-left: 3px solid var(--font);
+
+	background-color: var(--bg);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+
+	position: fixed;
+	top: 0;
+	right: -500px;
+	z-index: 15;
+
+	transition: right 0.5s;
+}
+
+#side-close {
+	width: 50px;
+
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.side-item {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+
+.side-item-block {
+	font-size: 1.5em;
+	padding: 5px 10px 5px 0;
+	border-right: 5px solid var(--top);
+}
+
+#selected-page-side { position: relative }
+#selected-page-side::before {
+	content: url("../images/selected.png");
+
+	height: 10px;
+
+	position: absolute;
+	left: -24px
 }
 
 
@@ -182,6 +245,10 @@ nav {
 	margin: 0 10px;
 	color: var(--footfont);
 }
+.contact-info a {
+	color: var(--footfont);
+	text-decoration: none;
+}
 
 .foot-title-mini {
 	margin-top: 18px;
@@ -190,6 +257,7 @@ nav {
 
 
 
+/* =====BACK BUTTON===== */
 #back-btn {
 	width: 44px;
 	height: 44px;
@@ -205,5 +273,48 @@ nav {
 	background-repeat: no-repeat;
 	background-position: center;
 
-	transition: bottom 0.3s;
+	transition: bottom 0.2s linear;
+}
+
+
+
+/* =====ADAPTIVE PARTS===== */
+@media screen and (max-width: 1100px) {
+	header {
+		flex-direction: column;
+		height: auto;
+		padding: 6px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	/* HEADER */
+	header {
+		flex-direction: row;
+		height: 60px;
+		padding: 0 10px;
+	}
+
+	nav { display: none }
+	.burger-nav { display: flex }
+
+
+	/* FOOTER */
+	.footer-content {
+		flex-direction: column;
+		padding-bottom: 50px;
+	}
+	.foot-left .foot-title, .foot-right .foot-title {
+		text-align: center;
+	}
+	.foot-right .foot-contact {
+		justify-content: left;
+		flex-direction: row-reverse;
+	}
+	.contact-info {
+		word-wrap: normal;
+	}
+	#back-btn {
+		left: 10px;
+	}
 }

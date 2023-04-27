@@ -21,93 +21,132 @@
 
 		<div class="head-col-left">
 			<div class="head-logo">
-				<a class="head-logo-icon" href="https://journal.top-academy.ru/ru">
+				<a class="head-logo-icon" href="https://journal.top-academy.ru/ru" target="_blank">
 					<img class="head-logo-img" src="images/top_logo_black.png" alt="Top Academy">
 				</a>
 				<a class="head-logo-group" href="index.html">
 					БВ321
 				</a>
-				<div class="toogle-theme"></div>
+				<div id="toogle-theme"></div>
 			</div>
 		</div>
 
 		<div class="head-col-right">
+			
 			<nav>
 				<a class="head-nav-item" href="index.html"><div class="nav-item-block" id="selected-page">Главная</div></a>
-				<a class="head-nav-item" href="index.html"><div class="nav-item-block">Презентации</div></a>
-				<a class="head-nav-item" href="index.html"><div class="nav-item-block">Видеозаписи</div></a>
-				<a class="head-nav-item" href="index.html"><div class="nav-item-block">Таблицы</div></a>
+				<a class="head-nav-item" href="#"><div class="nav-item-block">Презентации</div></a>
+				<a class="head-nav-item" href="#"><div class="nav-item-block">Видеозаписи</div></a>
+				<a class="head-nav-item" href="#"><div class="nav-item-block">Таблицы</div></a>
+				<a class="head-nav-item" href="#"><div class="nav-item-block">Статьи</div></a>
 				<a class="contacts" href="#footer">Контакты</a>
 			</nav>
+
+			<div class="burger-nav">
+				<svg id="burger-logo" stroke-width="3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000"><path d="M3 5h18M3 12h18M3 19h18" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+			</div>
+
 		</div>
 
 	</header>
 
 
 
+	<!-- =====HIDDEN SIDEBAR===== -->
+	<div id="side-nav">
+		<svg id="side-close" stroke-width="2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#D91842">
+			<path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" stroke="#D91842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		</svg>
+		<a class="side-item" href="index.html"><div class="side-item-block" id="selected-page-side">Главная</div></a>
+		<a class="side-item" href="#"><div class="side-item-block">Презентации</div></a>
+		<a class="side-item" href="#"><div class="side-item-block">Видеозаписи</div></a>
+		<a class="side-item" href="#"><div class="side-item-block">Таблицы</div></a>
+		<a class="side-item" href="#"><div class="side-item-block">Статьи</div></a>
+	</div>
+
+
+
 	<!-- =====MAIN===== -->
 	<main id="main">
-    <div class="main-content"></div>
+		<div class="main-content"></div>
 	</main>
 
 
 
 	<!-- =====FOOTER===== -->
 	<footer>
-    <div class="footer-content" id="footer">
+		<div class="footer-content" id="footer">
 
-      <div class="foot-left">
-        <h4 class="foot-title">Контакты академии</h4>
-        <div class="foot-contact">
-          <img class="contact-icon" src="images/contacts/email.png" alt="loc">
-          <p class="contact-info">ekat@top-academy.ru</p>
-        </div>
-        <h5 class="foot-title-mini">Учебный отдел</h5>
-        <div class="foot-contact">
-          <img class="contact-icon" src="images/contacts/location.png" alt="loc">
-          <p class="contact-info">г. Екатеринбург, ул. Энгельса, д. 36, этаж 4, аудитория 419/4</p>
-        </div>
-        <div class="foot-contact">
-          <img class="contact-icon" src="images/contacts/phone.png" alt="loc">
-          <p class="contact-info">+7(912)654-07-72</p>
-        </div>
-        <h5 class="foot-title-mini">Отдел продаж</h5>
-        <div class="foot-contact">
-          <img class="contact-icon" src="images/contacts/location.png" alt="loc">
-          <p class="contact-info">г. Екатеринбург, ул. Энгельса, д. 36, этаж 4, аудитория 422</p>
-        </div>
-        <div class="foot-contact">
-          <img class="contact-icon" src="images/contacts/phone.png" alt="loc">
-          <p class="contact-info">+7(343)317-22-90</p>
-        </div>
-      </div>
-      
-      <div class="foot-right">
-        <h4 class="foot-title">Контакты преподавателя</h4>
-        <div class="foot-contact">
-          <p class="contact-info">i.o.storozhev990@gmail.com</p>
-          <img class="contact-icon" src="images/contacts/email.png" alt="loc">
-        </div>
-        <div class="foot-contact">
-          <p class="contact-info">+7(999)566-37-01</p>
-          <img class="contact-icon" src="images/contacts/whatsapp.png" alt="loc">
-        </div>
-        <div class="foot-contact">
-          <p class="contact-info">https://github.com/IOPjolnir</p>
-          <img class="contact-icon" src="images/contacts/github.png" alt="loc">
-        </div>
-        <div class="foot-contact">
-          <p class="contact-info">https://www.youtube.com/channel/UCqd89DCDMK0SiN51lDszjLg</p>
-          <img class="contact-icon" src="images/contacts/youtube.png" alt="loc">
-        </div>
-      </div>
+			<div class="foot-left">
+				<h4 class="foot-title">Контакты академии</h4>
+				<div class="foot-contact">
+					<img class="contact-icon" src="images/contacts/calendar.png" alt="loc">
+					<p class="contact-info">ПН-ВС с 10:00 до 19:00</p>
+				</div>
+				<div class="foot-contact">
+					<img class="contact-icon" src="images/contacts/browser.png" alt="loc">
+					<p class="contact-info"><a href="https://ekat.top-academy.ru/" target="_blank">ekat.top-academy.ru</a></p>
+				</div>
+				<div class="foot-contact">
+					<img class="contact-icon" src="images/contacts/email.png" alt="loc">
+					<p class="contact-info"><a href="mailto:ekat@top-academy.ru" target="_blank">ekat@top-academy.ru</a></p>
+				</div>
+				<h5 class="foot-title-mini">Учебный отдел</h5>
+				<div class="foot-contact">
+					<img class="contact-icon" src="images/contacts/location.png" alt="loc">
+					<p class="contact-info"><a href="https://goo.gl/maps/zb7VYd6Phf8NVR1fA" target="_blank">
+						г. Екатеринбург, ул. Энгельса, д. 36, этаж 4, кабинет 419/4
+					</a></p>
+				</div>
+				<div class="foot-contact">
+					<img class="contact-icon" src="images/contacts/phone.png" alt="loc">
+					<p class="contact-info"><a href="tel:+7(912)654-07-72" target="_blank">
+						+7(912)654-07-72
+					</a></p>
+				</div>
+				<h5 class="foot-title-mini">Отдел продаж</h5>
+				<div class="foot-contact">
+					<img class="contact-icon" src="images/contacts/location.png" alt="loc">
+					<p class="contact-info"><a href="https://goo.gl/maps/zb7VYd6Phf8NVR1fA" target="_blank">
+						г. Екатеринбург, ул. Энгельса, д. 36, этаж 4, кабинет 422
+					</a></p>
+				</div>
+				<div class="foot-contact">
+					<img class="contact-icon" src="images/contacts/phone.png" alt="loc">
+					<p class="contact-info"><a href="tel:+7(343)317-22-90" target="_blank">
+						+7(343)317-22-90
+					</a></p>
+				</div>
+			</div>
+			
+			<div class="foot-right">
+				<h4 class="foot-title">Контакты преподавателя</h4>
+				<div class="foot-contact">
+					<p class="contact-info"><a href="mailto:i.o.storozhev990@gmail.com" target="_blank">i.o.storozhev<wbr>@gmail.com</a></p>
+					<img class="contact-icon" src="images/contacts/email.png" alt="loc">
+				</div>
+				<div class="foot-contact">
+					<p class="contact-info"><a href="tel:+7(999)566-37-01" target="_blank">+7(999)566-37-01</a></p>
+					<img class="contact-icon" src="images/contacts/whatsapp.png" alt="loc">
+				</div>
+				<div class="foot-contact">
+					<p class="contact-info"><a href="https://github.com/IOPjolnir" target="_blank">github.com/<wbr>IOPjolnir</a></p>
+					<img class="contact-icon" src="images/contacts/github.png" alt="loc">
+				</div>
+				<div class="foot-contact">
+					<p class="contact-info"><a href="https://www.youtube.com/channel/UCqd89DCDMK0SiN51lDszjLg" target="_blank">
+						youtube.com/<wbr>channel/<wbr>UCqd89DCDMK<wbr>0SiN51lDszjLg
+					</a></p>
+					<img class="contact-icon" src="images/contacts/youtube.png" alt="loc">
+				</div>
+			</div>
 
-    </div>
+		</div>
 	</footer>
 
 
 
-  <a id="back-btn" href="#main"></a>
+	<a id="back-btn" href="#main"></a>
 
 </body>
 
