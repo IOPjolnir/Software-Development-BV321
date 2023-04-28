@@ -1,18 +1,11 @@
-/* =====VARIABLES===== */
-:root {
-	--font: #000;
-	--bg: #FFF;
-	--top: #D91842;
-	--footbg: #000;
-	--footfont: #FFF;
-}
+
 
 
 #loading {
 	width: 100vw;
 	height: 100vh;
 
-	background-color: var(--bg);
+	background-color: #1D1D1D;
 
 	display: flex;
 	justify-content: center;
@@ -52,7 +45,7 @@
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
 	letter-spacing: 1px;
-	color: var(--font);
+	color: #FFF;
 	text-transform: uppercase;
 }
 
@@ -69,4 +62,9 @@
 		transform: rotate(360deg);
 		box-shadow: 1px 5px 2px #D91842;
 	}
+}
+
+iframe {
+	width: 500px;
+	height: 330px;
 }

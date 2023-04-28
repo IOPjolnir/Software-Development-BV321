@@ -1,4 +1,4 @@
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', () => {
 	let theme = localStorage.getItem('theme');
 	if (theme === null)
 		localStorage.setItem('theme', 'light');
@@ -6,8 +6,7 @@ window.onload = () => {
 		if (theme == 'dark') {
 			setDarkTheme();
 		}
-	loading.style.display = 'none';
-};
+});
 
 
 
@@ -19,7 +18,8 @@ const themeBtn = document.getElementById('toogle-theme');
 
 const variables = [
 	'--font',
-	'--bg'
+	'--bg',
+	'--sectionbg'
 ];
 const colors = [
 	{ // --font
@@ -29,6 +29,10 @@ const colors = [
 	{ // --bg
 		light: '#FFF',
 		dark: '#2D2D2D'
+	},
+	{ // --sectionbg
+		light: '#F0F0F0',
+		dark: '#222'
 	}
 ];
 
