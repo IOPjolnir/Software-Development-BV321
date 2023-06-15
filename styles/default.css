@@ -40,6 +40,7 @@ header {
 	align-items: center;
 
 	position: fixed;
+	top: 0;
 	z-index: 10;
 }
 
@@ -120,10 +121,13 @@ nav {
 
 .contacts {
 	border: 3px solid var(--top);
+
 	font-weight: bold;
 	color: var(--top);
+
 	cursor: pointer;
 	user-select: none;
+
 	transition: all 0.2s;
 }
 
@@ -142,6 +146,9 @@ nav {
 
 #burger-logo {
 	height: 40px;
+	
+	user-select: none;
+	cursor: pointer;
 }
 
 #side-nav {
@@ -171,6 +178,9 @@ nav {
 	position: absolute;
 	top: 10px;
 	left: 10px;
+
+	user-select: none;
+	cursor: pointer;
 }
 
 .side-item {
@@ -214,18 +224,19 @@ nav {
 
 .main-content {
 	min-height: 200px;
-	max-width: 1200px;
+	max-width: 1100px;
 	margin: 0 auto;
 	padding: 40px 6px;
 }
 
 .page-title {
-	font-size: 2.5em;
+	font-size: 3em;
+	margin-bottom: 14px;
 }
 
 .intro {
 	max-width: 900px;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 .main-title {
@@ -331,6 +342,10 @@ nav {
 }
 
 @media screen and (max-width: 900px) {
+	* {
+		font-size: 12px;
+	}
+
 	/* HEADER */
 	header {
 		flex-direction: row;
@@ -340,6 +355,17 @@ nav {
 
 	nav { display: none }
 	.burger-nav { display: flex }
+
+
+	/* =====MAIN===== */
+	/* .main-default.first, .main-section.first {
+		padding-top: 50px;
+	} */
+	
+	.page-title {
+		font-size: 2em;
+		text-align: center;
+	}
 
 
 	/* FOOTER */
@@ -363,17 +389,4 @@ nav {
 	#back-btn {
 		left: 10px;
 	}
-}
-
-
-
-
-
-
-.transition-fade {
-	transition: 0.1s;
-	opacity: 1;
-}
-html.is-animating .transition-fade {
-	opacity: 0;
 }
